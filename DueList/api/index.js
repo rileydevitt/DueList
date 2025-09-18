@@ -142,12 +142,12 @@ ${text}`;
 // Routes
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
 });
 
 // Upload and process syllabus
-app.post('/api/upload-syllabus', upload.single('syllabus'), async (req, res) => {
+app.post('/upload-syllabus', upload.single('syllabus'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No file uploaded' });
@@ -232,7 +232,7 @@ app.post('/api/upload-syllabus', upload.single('syllabus'), async (req, res) => 
 });
 
 // Get all tasks
-app.get('/api/tasks', async (req, res) => {
+app.get('/tasks', async (req, res) => {
   try {
     let data;
     if (supabase) {
@@ -258,7 +258,7 @@ app.get('/api/tasks', async (req, res) => {
 });
 
 // Update task
-app.put('/api/tasks/:id', async (req, res) => {
+app.put('/tasks/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
@@ -298,7 +298,7 @@ app.put('/api/tasks/:id', async (req, res) => {
 });
 
 // Delete task
-app.delete('/api/tasks/:id', async (req, res) => {
+app.delete('/tasks/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
