@@ -345,4 +345,5 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+// Export for Vercel
 module.exports = app;
