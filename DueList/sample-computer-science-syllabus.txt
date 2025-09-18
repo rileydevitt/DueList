@@ -1,0 +1,57 @@
+CS 341 - Advanced Data Structures and Algorithms
+Spring 2024 Syllabus
+
+Professor: Dr. Sarah Johnson
+Email: s.johnson@university.edu
+Office Hours: Tuesday/Thursday 2:00-4:00 PM
+
+Course Overview:
+This course covers advanced data structures and algorithm design techniques. Students will learn to analyze algorithmic complexity and implement efficient solutions to computational problems.
+
+IMPORTANT ASSIGNMENTS AND DUE DATES:
+
+Assignment 1: Hash Table Implementation
+Due: January 25, 2024
+Description: Implement a hash table with collision resolution using separate chaining. Include insert, delete, and search operations.
+
+Midterm Exam
+Date: February 15, 2024
+Topics: Covered material from weeks 1-6 including trees, graphs, and sorting algorithms.
+
+Assignment 2: Graph Algorithms Project
+Due: March 8, 2024
+Description: Implement Dijkstra's shortest path algorithm and demonstrate with a real-world routing application.
+
+Spring Break - No Classes
+March 11-15, 2024
+
+Assignment 3: Dynamic Programming Solutions
+Due: March 29, 2024
+Description: Solve three dynamic programming problems: knapsack, longest common subsequence, and edit distance.
+
+Research Paper Draft
+Due: April 12, 2024
+Description: 8-page research paper on a current topic in algorithmic research. Draft must include bibliography and methodology.
+
+Final Project Presentation
+Date: April 26, 2024
+Description: 15-minute presentation of your semester project including implementation demo and complexity analysis.
+
+Research Paper Final Draft
+Due: May 3, 2024
+Description: Final version of research paper incorporating feedback from draft submission.
+
+Final Exam
+Date: May 10, 2024, 9:00 AM
+Location: Engineering Building Room 205
+Comprehensive exam covering all course material.
+
+Grading:
+- Assignments (3): 30%
+- Midterm Exam: 20%
+- Research Paper: 20%
+- Final Project: 15%
+- Final Exam: 15%
+
+Late Policy:
+Late assignments will be penalized 10% per day. No assignments accepted more than 3 days late without prior arrangement.
