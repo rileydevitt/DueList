@@ -156,16 +156,8 @@ app.post('/upload-syllabus', upload.single('syllabus'), async (req, res) => {
 
     console.log('File received:', req.file.originalname, 'Size:', req.file.size);
 
-    // Extract text from file
-    console.log('Extracting text from file...');
-    const extractedText = await extractTextFromFile(req.file);
-
-    if (!extractedText.trim()) {
-      console.log('No text found in file');
-      return res.status(400).json({ error: 'No text found in the uploaded file' });
-    }
-
-    console.log('Text extracted, length:', extractedText.length);
+    // TEMPORARY: Skip file processing to test
+    console.log('Skipping file processing (temporarily)...');
 
     // TEMPORARY: Skip Gemini processing to test the rest
     console.log('Skipping Gemini (temporarily) and creating sample tasks...');
@@ -240,10 +232,12 @@ app.post('/upload-syllabus', upload.single('syllabus'), async (req, res) => {
       message += `, ${duplicatesSkipped} duplicate${duplicatesSkipped !== 1 ? 's' : ''} skipped`;
     }
 
+    console.log('Sending response with', data.length, 'tasks');
+
     res.json({
       message,
       tasks: data,
-      extractedText: extractedText.substring(0, 500) + '...' // Preview
+      extractedText: 'File processing temporarily disabled for testing'
     });
 
   } catch (error) {
