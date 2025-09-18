@@ -1,0 +1,80 @@
+PSYC 301 - Research Methods in Psychology
+Spring 2024
+
+Dr. Amanda Rodriguez, Ph.D.
+Email: a.rodriguez@psych.edu
+Office Hours: Monday 1:00-3:00 PM, Wednesday 10:00 AM-12:00 PM
+Location: Psychology Building, Room 108
+
+Course Objectives:
+Students will learn fundamental research methodologies used in psychological science, including experimental design, data collection techniques, statistical analysis, and research ethics.
+
+ASSIGNMENT SCHEDULE:
+
+Research Ethics Training Completion
+Due: January 18, 2024
+Complete online CITI training modules and submit completion certificate.
+
+Literature Review Assignment
+Due: February 1, 2024
+Write a 5-page literature review on an approved research topic in cognitive psychology.
+
+Hypothesis Development Workshop
+Date: February 8, 2024
+In-class workshop to develop testable hypotheses for your research proposal.
+
+Research Proposal Draft
+Due: February 22, 2024
+Submit 8-page research proposal including literature review, methodology, and expected outcomes.
+
+Peer Review Session
+Date: March 1, 2024
+Exchange proposals with classmates for constructive feedback and suggestions.
+
+Statistics Exam #1
+Date: March 8, 2024
+Covers descriptive statistics, probability, and hypothesis testing fundamentals.
+
+Revised Research Proposal
+Due: March 22, 2024
+Final version of research proposal incorporating peer feedback and instructor comments.
+
+Data Collection Period
+March 25 - April 12, 2024
+Conduct your approved research study and collect data from participants.
+
+Preliminary Data Analysis
+Due: April 15, 2024
+Submit initial statistical analysis of your collected data with interpretations.
+
+Statistics Exam #2
+Date: April 19, 2024
+Advanced statistics including ANOVA, regression, and non-parametric tests.
+
+Research Presentation
+Date: April 26, 2024
+15-minute presentation of your complete research study including methodology, results, and implications.
+
+Final Research Report
+Due: May 3, 2024
+Complete APA-style research paper (12-15 pages) documenting your study from conception to conclusion.
+
+Final Comprehensive Exam
+Date: May 10, 2024, 10:30 AM
+Cumulative exam covering all research methods, statistics, and ethical considerations.
+
+Grading Distribution:
+- Ethics Training: 5%
+- Literature Review: 10%
+- Research Proposal: 15%
+- Statistics Exams (2 × 12.5%): 25%
+- Data Collection & Analysis: 15%
+- Research Presentation: 10%
+- Final Research Report: 15%
+- Final Exam: 5%
+
+Special Requirements:
+- IRB approval required before data collection begins
+- Minimum 20 participants needed for study validity
+- All statistical analyses must be conducted using SPSS software
+- Research presentations will be recorded for portfolio purposes
