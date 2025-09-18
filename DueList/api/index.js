@@ -167,28 +167,22 @@ app.post('/upload-syllabus', upload.single('syllabus'), async (req, res) => {
 
     console.log('Text extracted, length:', extractedText.length);
 
-    // Process with Gemini (with timeout fallback)
-    console.log('Processing with Gemini...');
-    let extractedTasks;
-    try {
-      // Add timeout to prevent hanging
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error('AI processing timeout')), 8000)
-      );
+    // TEMPORARY: Skip Gemini processing to test the rest
+    console.log('Skipping Gemini (temporarily) and creating sample tasks...');
+    const extractedTasks = [
+      {
+        title: 'Assignment 1 - ' + req.file.originalname,
+        due_date: '2025-10-15',
+        description: 'Sample task extracted from uploaded file (AI processing disabled for testing)'
+      },
+      {
+        title: 'Quiz 1 - ' + req.file.originalname,
+        due_date: '2025-10-22',
+        description: 'Another sample task to test functionality'
+      }
+    ];
 
-      extractedTasks = await Promise.race([
-        extractTasksFromText(extractedText),
-        timeoutPromise
-      ]);
-    } catch (error) {
-      console.log('Gemini processing failed:', error.message);
-      // Fallback: return a sample task
-      extractedTasks = [{
-        title: 'Sample Task from ' + req.file.originalname,
-        due_date: '2025-12-31',
-        description: 'AI processing failed, please try again or add tasks manually'
-      }];
-    }
+    console.log('Tasks processed:', extractedTasks.length);
 
     // Get existing tasks to check for duplicates
     let existingTasks = [];
