@@ -5,7 +5,6 @@ const multer = require('multer');
 const pdfParse = require('pdf-parse');
 const mammoth = require('mammoth');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const { createClient } = require('@supabase/supabase-js');
 
 const app = express();
 
@@ -35,21 +34,12 @@ const upload = multer({
 // Initialize Google Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// Initialize Supabase (or use in-memory storage for testing)
+// Use in-memory storage only (no database)
 let supabase = null;
 let inMemoryTasks = [];
 let taskIdCounter = 1;
 
-if (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY &&
-    process.env.SUPABASE_URL !== 'your_supabase_project_url_here') {
-  supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_ANON_KEY
-  );
-  console.log('Using Supabase database');
-} else {
-  console.log('Using in-memory storage (for testing without Supabase)');
-}
+console.log('Using in-memory storage (no database)');
 
 // Helper function to extract text from different file types
 async function extractTextFromFile(file) {
