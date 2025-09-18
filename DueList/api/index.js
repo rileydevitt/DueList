@@ -138,20 +138,57 @@ app.get('/health', (req, res) => {
 
 // Upload and process syllabus
 app.post('/upload-syllabus', upload.single('syllabus'), async (req, res) => {
+  console.log('=== Upload endpoint hit ===');
+
   try {
+    // Check environment
+    if (!process.env.GEMINI_API_KEY) {
+      console.log('Missing GEMINI_API_KEY');
+      return res.status(500).json({ error: 'Server configuration error - missing API key' });
+    }
+
+    console.log('Environment check passed');
+
     if (!req.file) {
+      console.log('No file uploaded');
       return res.status(400).json({ error: 'No file uploaded' });
     }
 
+    console.log('File received:', req.file.originalname, 'Size:', req.file.size);
+
     // Extract text from file
+    console.log('Extracting text from file...');
     const extractedText = await extractTextFromFile(req.file);
 
     if (!extractedText.trim()) {
+      console.log('No text found in file');
       return res.status(400).json({ error: 'No text found in the uploaded file' });
     }
 
-    // Process with Gemini
-    const extractedTasks = await extractTasksFromText(extractedText);
+    console.log('Text extracted, length:', extractedText.length);
+
+    // Process with Gemini (with timeout fallback)
+    console.log('Processing with Gemini...');
+    let extractedTasks;
+    try {
+      // Add timeout to prevent hanging
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('AI processing timeout')), 8000)
+      );
+
+      extractedTasks = await Promise.race([
+        extractTasksFromText(extractedText),
+        timeoutPromise
+      ]);
+    } catch (error) {
+      console.log('Gemini processing failed:', error.message);
+      // Fallback: return a sample task
+      extractedTasks = [{
+        title: 'Sample Task from ' + req.file.originalname,
+        due_date: '2025-12-31',
+        description: 'AI processing failed, please try again or add tasks manually'
+      }];
+    }
 
     // Get existing tasks to check for duplicates
     let existingTasks = [];
