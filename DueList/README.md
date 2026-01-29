@@ -32,4 +32,3 @@ syllabus-todo-app/
 2. Configure Supabase database
 3. Start the backend server
 4. Set up and start the React frontend
-5. Upload a syllabus and see the magic happen!
