@@ -1,4 +1,4 @@
-## Features
+## DueList Features
 
 - Upload syllabus files (PDF, DOCX, TXT)
 - AI-powered extraction of assignments and due dates
